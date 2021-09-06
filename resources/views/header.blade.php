@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand h1" href="#">eComm</a>
+      <a class="navbar-brand h1" href="/">eComm</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Order</a>
@@ -24,9 +24,21 @@
         </ul>
        
         <ul class="navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cart(0)</a>
-            </li>
+          {{-- @if (!session('userAuth'))
+          <li class="nav-item">
+            <a class="nav-link" href="login">Login</a>
+          </li>
+          @endif --}}
+          
+          <li class="nav-item">
+              <a class="nav-link" href="#">Cart(0)</a>
+          </li>
+          {{-- @if (session('userAuth'))
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="logout">Logout</a>
+        </li>
+          @endif --}}
+          
         </ul>
       </div>
     </div>
